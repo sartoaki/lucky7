@@ -14,7 +14,8 @@ public class Lucky7 {
 	    int num2 = rand.nextInt(0,10) + 1;
 	    int num3 = rand.nextInt(0,10) + 1;
 
-	    int mony = 5;
+	    System.out.println("Monta euroa alkuun? (Anna pelkästään numeroina)");
+	    int mony = Integer.parseInt(in.nextLine());
 
 	    String vastaus = "";
 
@@ -66,7 +67,8 @@ public class Lucky7 {
 	    		vastaus = in.nextLine();
 
 	    		if (vastaus.equals("y")) {
-	    			mony = 5;
+	    			System.out.println("Monta euroa? (Anna pelkästään numeroina)");
+	    			mony = Integer.parseInt(in.nextLine());
 	    		}
 	   		}
 
