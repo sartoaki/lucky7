@@ -19,32 +19,32 @@ public class Lucky7 {
 	    String vastaus = "";
 
 	    do {
-	    	System.out.println("1 Peli = 1 euro. Sinulla on " + mony + " euroa\nx = lopeta");
-	    	vastaus = in.nextLine();
+		    System.out.println("1 Peli = 1 euro. Sinulla on " + mony + " euro(a)\nx = lopeta");
+		    vastaus = in.nextLine();
 
-	    	if (vastaus.equals("x")) {
-	    		break;
-	    	}
+		    if (vastaus.equals("x")) {
+		    	break;
+		    }
 
-	    	mony -= 1;
+		    mony -= 1;
 
-	    	num1 = rand.nextInt(0,10) + 1;
-	    	num2 = rand.nextInt(0,10) + 1;
-	    	num3 = rand.nextInt(0,10) + 1;
+		    num1 = rand.nextInt(0,10) + 1;
+		    num2 = rand.nextInt(0,10) + 1;
+		    num3 = rand.nextInt(0,10) + 1;
 
-	    	System.out.println((num1) + " " + (num2) + " " + (num3));
+		    System.out.println((num1) + " " + (num2) + " " + (num3));
 
-	    	int seiskat = 0;
+		    int seiskat = 0;
 
-	    	if (num1 == 7) {
-	    		seiskat += 1;
-	    	}
-	    	if (num2 == 7) {
-	    		seiskat += 1;
-	    	}
-	    	if (num3 == 7) {
-	    		seiskat += 1;
-	    	}
+		    if (num1 == 7) {
+		    	seiskat += 1;
+		    }
+		    if (num2 == 7) {
+		    	seiskat += 1;
+		    }
+		    if (num3 == 7) {
+		    	seiskat += 1;
+		    }
 
 			if (seiskat > 0) {
 				switch (seiskat) {
@@ -58,13 +58,19 @@ public class Lucky7 {
 						mony += 10;
 						break;
 				}
-				
 				System.out.println("YOU WIN");
 			}
-	    } while (mony > 0);
 
-	    if (mony <= 0) {
-	    	System.out.println("Sinulta loppui rahat\nGAME OVER");
+			if (mony <= 0) {
+	    		System.out.println("Sinulta loppui rahat. GAME OVER \n Haluatko pelata uudelleen? (y = kyllä, muu = lopeta)");
+	    		vastaus = in.nextLine();
+
+	    		if (vastaus.equals("y")) {
+	    			mony = 5;
+	    		}
+	   		}
+
+	    	} while (mony > 0);
+
 	    }
 	}
-}
