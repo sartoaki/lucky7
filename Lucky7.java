@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 
-public class App {
+public class Lucky7 {
 	public static void main(String[] args) {
 		
 		Scanner in = new Scanner(System.in);
@@ -17,8 +17,6 @@ public class App {
 	    int mony = 5;
 
 	    String vastaus = "";
-
-
 
 	    do {
 	    	System.out.println("1 Peli = 1 euro. Sinulla on " + mony + " euroa\nx = lopeta");
